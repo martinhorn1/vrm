@@ -10,51 +10,51 @@ class Bookings
     /**
      * @ORM\Id()
      * @ORM\GeneratedValue()
-     * @ORM\Column(type="integer")
+     * @ORM\Column(name="id", type="integer")
      */
     private $id;
     /**
-     * @ORM\Column(type="string", length=40, nullable=false)
+     * @ORM\Column(name="firstName", type="string", length=40, nullable=false)
      */
     private $firstName;
     /**
-     * @ORM\Column(type="string", length=40, nullable=false)
+     * @ORM\Column(name="lastName", type="string", length=40, nullable=false)
      */
     private $lastName;
     /**
-     * @ORM\Column(type="string", length=10, nullable=false)
+     * @ORM\Column(name="phone", type="string", length=10, nullable=false)
      */
     private $phone;
     /**
-     * @ORM\Column(type="string", length=20, nullable=false)
+     * @ORM\Column(name="email", type="string", length=20, nullable=false)
      */
     private $email;
     /**
-     * @ORM\Column(type="date", nullable=false)
+     * @ORM\Column(name="birthdate", type="date", nullable=false)
      */
     private $birthdate;
     /**
-     * @ORM\Column(type="date", nullable=false)
+     * @ORM\Column(name="startDate", type="date", nullable=false)
      */
     private $startDate;
     /**
-     * @ORM\Column(type="date", nullable=false)
+     * @ORM\Column(name="endDate", type="date", nullable=false)
      */
     private $endDate;
     /**
-     * @ORM\Column(type="time", nullable=true)
+     * @ORM\Column(name="arrivalTime", type="time", nullable=true)
      */
     private $arrivalTime;
     /**
-     * @ORM\Column(type="text")
+     * @ORM\Column(name="additionalIngformation", type="text")
      */
     private $additionaInformation;
     /**
-     * @ORM\Column(type="integer", nullable=false)
+     * @ORM\Column(name="nrOfPeople", type="integer", nullable=false)
      */
-    private $numberOfPeople;
+    private $nrOfPeople;
     /**
-     * @ORM\Column(type="string", length=10, nullable=false)
+     * @ORM\Column(name="payingMethod", type="string", length=10, nullable=false)
      */
     private $payingMethod;
     /**
@@ -132,7 +132,7 @@ class Bookings
      */
     public function getNumberOfPeople()
     {
-        return $this->numberOfPeople;
+        return $this->nrOfPeople;
     }
     /**
      * @return mixed
@@ -212,11 +212,11 @@ class Bookings
         $this->additionaInformation = $additionaInformation;
     }
     /**
-     * @param mixed $numberOfPeople
+     * @param mixed $nrOfPeople
      */
-    public function setNumberOfPeople($numberOfPeople)
+    public function setnrrOfPeople($nrOfPeople)
     {
-        $this->numberOfPeople = $numberOfPeople;
+        $this->nrOfPeople = $nrOfPeople;
     }
     /**
      * @param mixed $payingMethod
